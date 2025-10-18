@@ -11,10 +11,20 @@ config_version=5
 [application]
 
 config/name="HorarioProject"
+run/main_scene="res://World/scn_1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Images/Gemini_Generated_Image_exrjd3exrjd3exrj.png"
+
+[autoload]
+
+MainSignal="*res://Singletons/MainSignal.gd"
+PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")

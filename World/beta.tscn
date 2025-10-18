@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://cowmrxlpx5rkl"]
+
+[ext_resource type="PackedScene" uid="uid://cvxy4bcyyry6a" path="res://World/buttons.tscn" id="2_3hoh6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_853ql"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Beta" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="BUTTONS" parent="HBoxContainer/VBoxContainer" instance=ExtResource("2_3hoh6")]
+layout_mode = 2
+
+[node name="BUTTONS2" parent="HBoxContainer" instance=ExtResource("2_3hoh6")]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_853ql")
+buttonType = 2
+
+[node name="BUTTONS3" parent="HBoxContainer" instance=ExtResource("2_3hoh6")]
+layout_mode = 2
+buttonType = 0
+
+[node name="AppSize" parent="HBoxContainer/BUTTONS3" index="0"]
+min_maxWeight = Vector2(300, 800)
+
+[editable path="HBoxContainer/BUTTONS3"]
